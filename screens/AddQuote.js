@@ -6,10 +6,12 @@ import {
   Text,
   StyleSheet,
 } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 import AsyncStorage from '@react-native-async-storage/async-storage';
 //recoil
 import { useRecoilState } from 'recoil';
 import { quotesState } from '../recoilState'
+
 
 export default function AddQuote() {
   // global states
@@ -18,6 +20,10 @@ export default function AddQuote() {
   //local states
   const [newQuote, setNewQuote] = useState("");
   const [newAuthor, setNewAuthor] = useState("");
+  const [showError, setShowError] = useState(false); 
+
+  //constants
+  const navigation = useNavigation();
 
 
   /* -------------------------------- functions ------------------------------- */
@@ -31,6 +37,11 @@ export default function AddQuote() {
   };
 
   const addNewQuote = () => {
+    if (!newQuote.trim() || !newAuthor.trim()) {
+      setShowError(true);
+      return;
+    }
+  
     const newQuoteItem = {
       quote: newQuote,
       author: newAuthor,
@@ -43,6 +54,8 @@ export default function AddQuote() {
     // Clear input fields after adding
     setNewQuote("");
     setNewAuthor("");
+
+    navigation.navigate('Home')
   };
 
   return (
@@ -63,7 +76,11 @@ export default function AddQuote() {
       <TouchableOpacity style={styles.button} onPress={addNewQuote}>
         <Text style={styles.buttonText}>ENTER</Text>
       </TouchableOpacity>
+      {showError && (
+        <Text style={styles.errorMessage}>Both fields are required</Text>
+      )}
     </View>
+
   );
 }
 
@@ -101,5 +118,9 @@ const styles = StyleSheet.create({
     color: "#fff",
     fontSize: 16,
     fontWeight: "bold",
+  },
+  errorMessage: {
+    color: 'red',
+    marginBottom: 10,
   },
 });

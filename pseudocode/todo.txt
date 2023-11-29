@@ -1,0 +1,21 @@
+todo:
+do all the test
+what is atom and selector ? what is the file strucutre
+publish my expo app
+what is the difference between dev run and expo start
+setting the runtimeversion for publishing https://docs.expo.dev/eas-update/runtime-versions/#custom--runtimeversion
+register a google play console account
+add share quote functionality to social media
+learn how to build they share a quote and text generator
+do the frontend mentor
+https://www.youtube.com/watch?v=QqDH5sYzDS8 
+done:
+register a google play console account
+error msg when there is no input
+learning the expo eas halfway for publishing the app
+
+navigate to the home page after clicking enter in Add New Quote
+
+
+technologies:
+recoil

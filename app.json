@@ -1,8 +1,9 @@
 {
   "expo": {
-    "name": "book-quoting-app",
-    "slug": "book-quoting-app",
+    "name": "My-Quote",
+    "slug": "my-quote",
     "version": "1.0.0",
+    "description": "",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -25,6 +26,17 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "88949d3c-92cd-4c62-b852-a6f96fc24367"
+      }
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/88949d3c-92cd-4c62-b852-a6f96fc24367"
     }
   }
 }
