@@ -8,9 +8,9 @@ do the frontend mentor
 https://www.youtube.com/watch?v=QqDH5sYzDS8 
 
 today:
-publish my expo app
+move flatlist to the quotelist components
+resolve the addquote error
 register a google play console account
-setting the runtimeversion for publishing https://docs.expo.dev/eas-update/runtime-versions/#custom--runtimeversion
 
 done:
 register a google play console account
