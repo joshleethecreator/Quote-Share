@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "My-Quote",
-    "slug": "my-quote",
+    "name": "Quote-Share",
+    "slug": "quote-share",
     "version": "1.0.0",
     "description": "",
     "orientation": "portrait",
@@ -16,13 +16,15 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.joshthecoder9099.myquote"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.joshthecoder9099.myquote"
     },
     "web": {
       "favicon": "./assets/favicon.png"
